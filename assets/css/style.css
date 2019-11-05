@@ -7990,4 +7990,7 @@ a.popup-img {
 .cursor-default {
 	cursor: default;
 }
-
+.asterisk {
+	display: inline;
+	color: red;
+}

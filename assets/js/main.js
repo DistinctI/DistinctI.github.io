@@ -523,47 +523,5 @@ $('[name="payment-method"]').on('click', function(){
     $('[data-method="'+$value+'"]').slideDown();
     
 })
-    
-/*--
-	MailChimp
------------------------------------*/
-$('#mc-form').ajaxChimp({
-	language: 'en',
-	callback: mailChimpResponse,
-	// ADD YOUR MAILCHIMP URL BELOW HERE!
-	url: 'http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef'
-
-});
-function mailChimpResponse(resp) {
-	
-	if (resp.result === 'success') {
-		$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
-		$('.mailchimp-error').fadeOut(400);
-		
-	} else if(resp.result === 'error') {
-		$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
-	}  
-}
-    
-/*--
-    Conatact Map
------------------------------------*/
-if($('.contact-map').length){
-    function initialize() {
-        var mapOptions = {
-            zoom: 14,
-            scrollwheel: false,
-            center: new google.maps.LatLng(40.730610, -73.935242)
-        };
-        var map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
-        var marker = new google.maps.Marker({
-            position: map.getCenter(),
-            map: map,
-            animation: google.maps.Animation.BOUNCE
-        });
-
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-}
   
 })(jQuery);	
