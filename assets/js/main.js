@@ -114,7 +114,12 @@ $('select').niceSelect();
 $('.hero-slider').slick({
     infinite: true,
     fade: true,
+    speed: 1000,
     dots: false,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
     prevArrow: '<button class="slick-prev"><i class="fa fa-angle-left"></i></button>',
     nextArrow: '<button class="slick-next"><i class="fa fa-angle-right"></i></button>',
     responsive: [
@@ -133,9 +138,13 @@ $('.testimonial-slider-content').slick({
     arrows: false,
     fade: false,
     dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     prevArrow: '<button class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
     nextArrow: '<button class="slick-next"><i class="fa fa-chevron-right"></i></button>',
     responsive: [
@@ -175,9 +184,14 @@ $('.testimonial-slider-content').slick({
 $('.brand-slider').slick({
     infinite: true,
     arrows: false,
-    dots: true,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
     slidesToShow: 5,
     slidesToScroll: 5,
+    centerMode: true,
     responsive: [
         {
             breakpoint: 1199,
@@ -194,7 +208,7 @@ $('.brand-slider').slick({
         {
             breakpoint: 768,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 2,
             }
         },
         {
